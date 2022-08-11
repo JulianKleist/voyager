@@ -1,20 +1,26 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import Buttons from "../Components/Buttons";
 
 export default function HomeScreen() {
     
     return (
         <View>
-            <Text style={styles.greetings}>Hey, Julian!</Text>
-            <Text style={styles.title}>Where would you like to travel today?</Text>
-            <Text>Buttons</Text>
+            <View style={styles.titleCont}>
+                <Text style={styles.greetings}>Hey, Julian!</Text>
+                <Text style={styles.title}>Where would you like to travel today?</Text>
+            </View>
+            <Buttons />
             <Text>Destinations</Text>
         </View>
     )
 }
 
-
 const styles = StyleSheet.create({
+    titleCont: {
+        marginTop: '35%',
+        marginHorizontal: 30
+    },
     greetings: {
         color: '#A8A8A8',
         fontSize: 16
