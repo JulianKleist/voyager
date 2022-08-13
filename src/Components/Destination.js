@@ -24,9 +24,58 @@ export default function Destination() {
             </View>
           </ImageBackground>
         </View>
-        <View></View>
-        <View></View>
-        <View></View>
+
+        <View style={{borderRadius: 15, marginLeft: 15}}>
+            <ImageBackground source={require('../Assets/BA.jpg')} imageStyle={{ borderRadius: 15}} style={styles.image}>
+                <Text style={styles.destTittle}>Puerto Madero</Text>
+                <View style={{flexDirection: 'row', marginLeft: 6}}>
+                <EvilIcons name="location" size={20} color="white" />
+                <Text style={styles.destLoc}>Buenos Aires, Argentina</Text>
+                </View>
+                <View style={{flexDirection: 'row'}}>
+                <View style={styles.destStar}>
+                    <MaterialIcons name="star" size={15} color="#6F8099" />
+                    <Text style={{fontSize: 12, color: '#6F8099'}}> 4.8 </Text>
+                </View>
+                <MaterialIcons style={styles.destDropdown} name="keyboard-arrow-down" size={24} color="white" />
+                </View>
+            </ImageBackground>
+        </View>
+      </View>
+      <View style={styles.destination2}>
+        <View style={{borderRadius: 15}}>
+            <ImageBackground source={require('../Assets/BA.jpg')} imageStyle={{ borderRadius: 15}} style={styles.image}>
+                <Text style={styles.destTittle}>Puerto Madero</Text>
+                <View style={{flexDirection: 'row', marginLeft: 6}}>
+                <EvilIcons name="location" size={20} color="white" />
+                <Text style={styles.destLoc}>Buenos Aires, Argentina</Text>
+                </View>
+                <View style={{flexDirection: 'row'}}>
+                <View style={styles.destStar}>
+                    <MaterialIcons name="star" size={15} color="#6F8099" />
+                    <Text style={{fontSize: 12, color: '#6F8099'}}> 4.8 </Text>
+                </View>
+                <MaterialIcons style={styles.destDropdown} name="keyboard-arrow-down" size={24} color="white" />
+                </View>
+            </ImageBackground>
+        </View>
+        
+        <View style={{borderRadius: 15, marginLeft: 15}}>
+            <ImageBackground source={require('../Assets/BA.jpg')} imageStyle={{ borderRadius: 15}} style={styles.image}>
+                <Text style={styles.destTittle}>Puerto Madero</Text>
+                <View style={{flexDirection: 'row', marginLeft: 6}}>
+                <EvilIcons name="location" size={20} color="white" />
+                <Text style={styles.destLoc}>Buenos Aires, Argentina</Text>
+                </View>
+                <View style={{flexDirection: 'row'}}>
+                <View style={styles.destStar}>
+                    <MaterialIcons name="star" size={15} color="#6F8099" />
+                    <Text style={{fontSize: 12, color: '#6F8099'}}> 4.8 </Text>
+                </View>
+                <MaterialIcons style={styles.destDropdown} name="keyboard-arrow-down" size={24} color="white" />
+                </View>
+            </ImageBackground>
+        </View>
       </View>
     </View>
   )
@@ -41,7 +90,13 @@ const styles = StyleSheet.create({
         marginLeft: 30
     },
     destination: {
-        marginLeft: 30
+        marginLeft: 30,
+        flexDirection: 'row',
+    },
+    destination2: {
+        marginLeft: 30,
+        flexDirection: 'row',
+        marginTop: 15
     },
     image: {
         height: 200,
