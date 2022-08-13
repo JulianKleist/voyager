@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import Buttons from "../Components/Buttons";
+import Destination from '../Components/Destination';
 
 export default function HomeScreen() {
     
@@ -11,7 +12,7 @@ export default function HomeScreen() {
                 <Text style={styles.title}>Where would you like to travel today?</Text>
             </View>
             <Buttons />
-            <Text>Destinations</Text>
+            <Destination />
         </View>
     )
 }
