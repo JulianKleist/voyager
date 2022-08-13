@@ -1,31 +1,33 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import { MaterialIcons } from '@expo/vector-icons';
 
+
 export default function Buttons() {
+  const [isActive, setIsActive] = useState('none')
   return (
-    <View style={styles.container}>
-      <View style={styles.buttonBox}>
+        <View style={styles.container}>
+          <View style={styles.buttonBox}>
             <View style={styles.activeButton}>
-              <MaterialIcons name="flight" size={28} color="#4BDBCE" />
+              <MaterialIcons name="flight" size={28} color="#4BDBCE" onPress={() => setIsActive('flight')} />
             </View>
             <Text style={styles.texts}>Flight</Text>
           </View>
           <View style={styles.buttonBox}>
-            <View style={styles.buttons}>
-              <MaterialIcons name="train" size={28} color="#717ACE" />
+            <View style={styles.buttons} >
+              <MaterialIcons name="train" size={28} color="#717ACE" onPress={() => setIsActive('train')} />
             </View>
             <Text style={styles.texts}>Train</Text>
           </View>
           <View style={styles.buttonBox}>
             <View style={styles.buttons}>
-              <MaterialIcons name="directions-boat" size={28} color="#FF724C" />
+              <MaterialIcons name="directions-boat" size={28} color="#FF724C" onPress={() => setIsActive('cruise')} />
             </View>
             <Text style={styles.texts}>Cruise</Text>
           </View>
           <View style={styles.buttonBox}>
             <View style={styles.buttons}>
-              <MaterialIcons name="directions-bus" size={28} color="#F4BF00" />
+              <MaterialIcons name="directions-bus" size={28} color="#F4BF00" onPress={() => setIsActive('bus')} />
             </View>
             <Text style={styles.texts}>Bus</Text>
           </View>
@@ -66,3 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 })
+
+function pressed(button) {
+  return button
+}
